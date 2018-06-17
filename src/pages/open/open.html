@@ -1,0 +1,45 @@
+<!--
+  Generated template for the OpenPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>open</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    
+        <img src="../assets/imgs/welcome.png"/>
+        <ion-card-content>
+          <ion-card-title>
+            TipTask
+          </ion-card-title>
+          <p>
+            O Melhor criador de tarefas que existe.
+            Organize a sua vida!
+          </p>
+        </ion-card-content>
+    
+        <ion-row>
+            <ion-col>
+              <button ion-button icon-left clear small (click)="carregarTelaLogin()" >
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <div>Entrar</div>
+              </button>
+            </ion-col>
+            <ion-col>
+              <button ion-button icon-left clear small (click)="carregarTelaCadastro()">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                <div>Cadastrar</div>
+              </button>
+            </ion-col>
+      </ion-row>
+
+</ion-content>

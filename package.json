@@ -25,6 +25,7 @@
     "@ionic-native/core": "4.7.0",
     "@ionic-native/email-composer": "^4.8.0",
     "@ionic-native/file": "^4.8.0",
+    "@ionic-native/geolocation": "^4.8.0",
     "@ionic-native/splash-screen": "4.7.0",
     "@ionic-native/sqlite": "^4.7.0",
     "@ionic-native/status-bar": "4.7.0",
@@ -33,6 +34,7 @@
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-email-composer": "^0.8.15",
     "cordova-plugin-file": "^6.0.1",
+    "cordova-plugin-geolocation": "^4.0.1",
     "cordova-plugin-ionic-keyboard": "^2.0.5",
     "cordova-plugin-ionic-webview": "^1.1.19",
     "cordova-plugin-splashscreen": "^5.0.2",
@@ -62,6 +64,9 @@
       "cordova-plugin-email-composer": {},
       "phonegap-plugin-barcodescanner": {
         "ANDROID_SUPPORT_V4_VERSION": "27.+"
+      },
+      "cordova-plugin-geolocation": {
+        "GEOLOCATION_USAGE_DESCRIPTION": "To locate you"
       }
     },
     "platforms": [

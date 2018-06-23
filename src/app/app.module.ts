@@ -16,6 +16,7 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
 import { TarefasProvider } from '../providers/tarefas/tarefas';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { GeolocalizacaoProvider } from '../providers/geolocalizacao/geolocalizacao';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner';
     File,
     EmailComposer,
     TarefasProvider,
-    BarcodeScanner
+    BarcodeScanner,
+    GeolocalizacaoProvider,
+    Geolocation
   ]
 })
 export class AppModule {}

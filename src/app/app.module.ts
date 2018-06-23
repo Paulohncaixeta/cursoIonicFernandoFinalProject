@@ -16,14 +16,17 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
 import { TarefasProvider } from '../providers/tarefas/tarefas';
 import { EmailComposer } from '@ionic-native/email-composer';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
+import { Geolocation } from '@ionic-native/geolocation';
 import { GeolocalizacaoProvider } from '../providers/geolocalizacao/geolocalizacao';
+import { LocalizarComponent } from '../components/localizar/localizar';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     ListPage,
-    //LoginPage
+    //LoginPage,
+    LocalizarComponent
   ],
   imports: [
     BrowserModule,
@@ -34,6 +37,7 @@ import { GeolocalizacaoProvider } from '../providers/geolocalizacao/geolocalizac
     MyApp,
     HomePage,
     ListPage,
+    LocalizarComponent
     //LoginPage
   ],
   providers: [
@@ -48,7 +52,8 @@ import { GeolocalizacaoProvider } from '../providers/geolocalizacao/geolocalizac
     TarefasProvider,
     BarcodeScanner,
     GeolocalizacaoProvider,
-    Geolocation
+    Geolocation,
+    LocalizarComponent
   ]
 })
 export class AppModule {}

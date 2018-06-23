@@ -28,10 +28,14 @@ export class MyApp {
     bancoDadosProvider.createDatabase()
 
     this.pages = [
-      { title: 'List',     component: ListPage },
-      { title: 'Cadastro', component: 'CadastroPage'},
-      { title: 'Open',     component: 'OpenPage'},
-      { title: 'Login',    component: 'LoginPage'}
+      { title: 'List',      component: ListPage },
+      { title: 'Cadastro',  component: 'CadastroPage'},
+      { title: 'Open',      component: 'OpenPage'},
+      { title: 'Login',     component: 'LoginPage'},
+      { title: 'Geo',       component: 'GeolocalizacaoPage'},
+      { title: 'CodBar',    component: 'CodigoBarrasPage'},
+      { title: 'ArqTexto',  component: 'ArquivoTextoPage'},
+      
 
     ];
 

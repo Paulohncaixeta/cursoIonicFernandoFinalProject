@@ -11,9 +11,12 @@
   <ion-list>
       <ion-title>Criar Tarefa com texto</ion-title>
       <ion-item>
-          
-        <ion-label floating>Categoria</ion-label>
-        <ion-input [(ngModel)]="CategoriaTarefa" type="text"></ion-input>
+        <ion-label>Categorias</ion-label>
+        <ion-select [(ngModel)]="CategoriaTarefa">
+          <ion-option value="casa">Casa</ion-option>
+          <ion-option value="trabalho">Trabalho</ion-option>
+          <ion-option value="faculdade">Faculdade</ion-option>
+        </ion-select>
       </ion-item>
 
       <ion-item>

@@ -2,6 +2,7 @@ import { UsuarioProvider } from './../../providers/usuario/usuario';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+
 /**
  * Generated class for the CadastraUsuarioPage page.
  *
@@ -40,6 +41,11 @@ export class CadastraUsuarioPage {
         console.log('ionViewDidLoad CadastroPage', err);
       })
     }
-  
+
+
+  voltarOpen(){
+    this.navCtrl.push('OpenPage')
+  }
+
 
 }

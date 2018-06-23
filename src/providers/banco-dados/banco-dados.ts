@@ -1,17 +1,9 @@
 import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
-/*
-  Generated class for the BancoDadosProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class BancoDadosProvider {
   
-   public MensagemDeErro : String = "";
- 
    constructor(private sqlite: SQLite) { 
  
    }  
@@ -41,7 +33,13 @@ export class BancoDadosProvider {
        ['CREATE TABLE IF NOT EXISTS usuario' + 
         ' (idUsuario integer primary key AUTOINCREMENT NOT NULL, ' + 
         ' nomeUsuario VARCHAR (100),'+
-        ' senhaUsuario VARCHAR(8));']])
+        ' senhaUsuario VARCHAR(8) );'],
+        ['CREATE TABLE IF NOT EXISTS tarefas' +
+         ' (idTarefa integer primary key AUTOINCREMENT NOT NULL, ' +
+         ' titulo VARCHAR(100), ' +
+         ' item VARCHAR(100), ' +
+         ' fotoItem VARCHAR(100) );' ]
+      ])
        .then(() => console.log('Usuario criadas'))
        .catch(e => console.error('Erro ao criar as tabelas', e));
    } 

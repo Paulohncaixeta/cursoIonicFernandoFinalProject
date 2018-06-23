@@ -46,42 +46,23 @@ export class LoginPage {
   
 
   onSubmit(values) {
-    if (values.nomeUsuario === 'unipam' && values.senhaUsuario === '123') {
+    console.log('Irei fazer Login', values)
+    this.usuario.getUserLogin(values).then((res: any) => {
+      this.navCtrl.setRoot(HomePage)
+    }).catch((err) => {
       let alert = this.alertCtrl.create({
         title: 'Atenção',
-        subTitle: 'Bem-vindo',
+        subTitle: 'Erro ao fazer Login! ' + JSON.stringify(err),
         buttons: 
-        [
+        [       
           {
-            text: 'Sim',
-            handler: () => {
-              this.navCtrl.push(HomePage);
-            }
-          },
-        
-          
-          {
-            text: 'Não'
+            text: 'OK'
           }
         ]
-      });
+      })
+
       alert.present();
-      
-    } else { 
-      let alert = this.alertCtrl.create({
-        title: 'Atenção',
-        subTitle: 'Deu errado',
-        buttons: 
-        [
-          {
-            text: 'Ok'
-          }
-        ]
-      });
-      alert.present();
-      
-    }
-    
+    })
   }
 
   cadastrarUsuario(){

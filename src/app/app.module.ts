@@ -1,3 +1,4 @@
+import { File } from '@ionic-native/file';
 import { SQLite } from '@ionic-native/sqlite';
 //import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,6 +13,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BancoDadosProvider } from '../providers/banco-dados/banco-dados';
 import { UsuarioProvider } from '../providers/usuario/usuario';
+import { TarefasProvider } from '../providers/tarefas/tarefas';
+import { EmailComposer } from '@ionic-native/email-composer';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BancoDadosProvider,
     UsuarioProvider,
-    SQLite
+    SQLite,
+    File,
+    EmailComposer,
+    TarefasProvider,
+    BarcodeScanner
   ]
 })
 export class AppModule {}

@@ -35,6 +35,7 @@ export class CadastraUsuarioPage {
       }
       this.usuario.criaUsuario(cadastro).then((item)=>{
         console.log('ionViewDidLoad CadastroPage', item);
+        this.navCtrl.setRoot('LoginPage')
       }).catch((err)=>{
         console.log('ionViewDidLoad CadastroPage', err);
       })

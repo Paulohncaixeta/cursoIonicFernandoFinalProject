@@ -11,4 +11,10 @@ export class HomePage {
 
   }
 
+  addItem() {
+    console.log('err')
+    this.navCtrl.push('CriarTarefaPage') 
+    console.log('err2')
+  }
+ 
 }

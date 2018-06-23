@@ -1,0 +1,46 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Criar Tarefas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+      <ion-title>Criar Tarefa com texto</ion-title>
+      <ion-item>
+          
+        <ion-label floating>Categoria</ion-label>
+        <ion-input [(ngModel)]="CategoriaTarefa" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>Sub-Item</ion-label>
+        <ion-input [(ngModel)]="ItemTarefa" type="text">Item da Tarefa</ion-input>
+      </ion-item>
+
+      <button ion-button block (click)="addTarefaTexto()">Criar tarefa</button>
+  </ion-list>
+
+  <ion-list>
+      <ion-title>Criar Tarefa com Foto</ion-title>
+      <ion-item>
+          
+        <ion-label floating>Categoria</ion-label>
+        <ion-input [(ngModel)]="CategoriaTarefa" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-label floating>Foto</ion-label>
+        <ion-input [(ngModel)]="ItemTarefa" type="text">Item da Tarefa</ion-input>
+      </ion-item>
+
+      <button ion-button block (click)="addTarefaTexto()">Criar tarefa</button>
+  </ion-list>
+
+</ion-content>
+
+
+

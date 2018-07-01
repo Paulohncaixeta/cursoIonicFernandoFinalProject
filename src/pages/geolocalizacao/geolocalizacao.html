@@ -1,33 +1,33 @@
 <ion-header>
-    
-      <ion-toolbar>
-        <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-        </button>
-    
-        <ion-buttons>
-          <button ion-button icon-only color="dark" (click)="posicaoAtual()">
-            Geolocalização
-            <ion-icon name="md-refresh"></ion-icon>
-          </button>
-        </ion-buttons>
-    
-        <ion-buttons end>
-          <button ion-button icon-only color="dark" (click)="openModal()">
-            <ion-icon name="search"></ion-icon>
-          </button>
-        </ion-buttons>
-      </ion-toolbar>
-    
-    </ion-header>
-    
-    
-    <ion-content>
-      <div id="map"></div>
-    
-      <ion-fab left bottom>
-        <button ion-fab color="dark" (click)="navegar()">
-          <ion-icon name='car'></ion-icon>
-        </button>
-      </ion-fab>
-    </ion-content>
+  <ion-navbar>
+    <ion-title>
+      Gps
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>
+    <p>Latitude:  {{latitude}}</p>
+    <p>Longitude: {{longitude}}</p>
+    <p>Endereco:  {{enderecoPosicao}}</p>
+    <p>Latitude Destino:  {{latitudeDestino}}</p>
+    <p>Longitude Destino: {{longitudeDestino}}</p>
+    <p>Endereco Destino:  {{enderecoDestino}}</p>
+  </div>
+
+  <div id="map"></div>
+
+  <ion-fab right top>
+    <button ion-fab (tap)="novoLugar()">
+
+        <ion-icon name="pin"></ion-icon>
+        <ion-icon name="search"></ion-icon>
+
+    </button>
+
+    <button ion-fab (tap) = "rota()">
+      <ion-icon name="car"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

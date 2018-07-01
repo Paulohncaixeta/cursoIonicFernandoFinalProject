@@ -12,32 +12,39 @@ declare var google: any;
 export class GeolocalizacaoProvider {
 
   constructor() {
-    console.log('Hello Geolocalizacao Provider');
+    console.log('Hello GeoAulaProvider Provider');
   }
 
-  LocalizacaoCoordenadas(lat, lng): any {
-    var local = new google.maps.Geocoder();
-    return new Promise(function (resolve, reject) {
-      local.geocode({'location': new google.maps.LatLng(lat, lng)}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          resolve(results[0]['formatted_address']);
-        } else {
-          reject(status);
-        }
-      })
-    })
+  buscarEndereco(lat, lng): any{
+    var geocoder = new google.maps.Geocoder();
+    return new Promise(function (resolve, reject)
+    {
+      geocoder.geocode({'location': new google.maps.LatLng(
+        lat,lng)}, function(results,status){
+          if(status == google.maps.GeocoderStatus.OK)
+          {
+            resolve(results[0]['formatted_address']);
+          }
+          else {
+            reject(status);
+          }
+        });
+    });
   }
 
-  LocalizacaoEndereco(endereco): any {
-    var local = new google.maps.Geocoder();
-    return new Promise(function (resolve, reject) {
-      local.geocode({'address': endereco}, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          resolve(results);
-        } else {
-          reject(status);
-        }
-      });
+  buscarCoordenadas(endereco): any{
+    var geocoder = new google.maps.Geocoder();
+    return new Promise(function (resolve, reject)
+    {
+      geocoder.geocode({'address': endereco}, function(results,status){
+          if(status == google.maps.GeocoderStatus.OK)
+          {
+            resolve(results);
+          }
+          else {
+            reject(status);
+          }
+        });
     });
   }
 }

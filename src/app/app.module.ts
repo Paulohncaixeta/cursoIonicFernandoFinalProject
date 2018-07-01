@@ -18,7 +18,7 @@ import { EmailComposer } from '@ionic-native/email-composer';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 import { Geolocation } from '@ionic-native/geolocation';
 import { GeolocalizacaoProvider } from '../providers/geolocalizacao/geolocalizacao';
-import { LocalizarComponent } from '../components/localizar/localizar';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { LocalizarComponent } from '../components/localizar/localizar';
     HomePage,
     ListPage,
     //LoginPage,
-    LocalizarComponent
+   
   ],
   imports: [
     BrowserModule,
@@ -37,23 +37,22 @@ import { LocalizarComponent } from '../components/localizar/localizar';
     MyApp,
     HomePage,
     ListPage,
-    LocalizarComponent
+  
     //LoginPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
     BancoDadosProvider,
     UsuarioProvider,
     SQLite,
     File,
     EmailComposer,
     TarefasProvider,
-    BarcodeScanner,
+    BarcodeScanner,Geolocation,
     GeolocalizacaoProvider,
-    Geolocation,
-    LocalizarComponent
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
+      
   ]
 })
 export class AppModule {}
